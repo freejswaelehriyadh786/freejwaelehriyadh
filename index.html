@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freej Swaeleh Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Freej Swaileh Menu</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,65 +11,106 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.5;
         }
         header {
             background-color: #8B4513;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
         }
         header h1 {
             margin: 0;
-            font-size: 2.5rem;
+            font-size: 2rem;
         }
         .menu-container {
-            max-width: 800px;
-            margin: 2rem auto;
+            max-width: 900px;
+            margin: 1.5rem auto;
             padding: 0 1rem;
         }
         .menu-section {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .menu-section h2 {
             color: #8B4513;
             border-bottom: 2px solid #8B4513;
             padding-bottom: 0.5rem;
+            font-size: 1.5rem;
         }
         .menu-item {
             display: flex;
             justify-content: space-between;
-            padding: 0.5rem 0;
+            align-items: flex-start;
+            padding: 0.75rem 0;
             border-bottom: 1px dashed #ccc;
         }
         .menu-item span {
             font-weight: bold;
+            font-size: 1rem;
         }
         .price {
             color: #2e7d32;
+            font-weight: bold;
+            font-size: 1rem;
+            white-space: nowrap;
         }
         .arabic-name {
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             color: #555;
+            margin-top: 0.2rem;
         }
-        @media (max-width: 600px) {
+        @media (max-width: 768px) {
             header h1 {
-                font-size: 1.8rem;
+                font-size: 1.5rem;
             }
             .menu-container {
                 padding: 0 0.5rem;
+            }
+            .menu-section h2 {
+                font-size: 1.3rem;
+            }
+            .menu-item {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .menu-item span {
+                font-size: 0.95rem;
+            }
+            .price {
+                font-size: 0.95rem;
+            }
+            .arabic-name {
+                font-size: 0.8rem;
+            }
+        }
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.2rem;
+            }
+            .menu-section h2 {
+                font-size: 1.1rem;
+            }
+            .menu-item span {
+                font-size: 0.9rem;
+            }
+            .price {
+                font-size: 0.9rem;
+            }
+            .arabic-name {
+                font-size: 0.75rem;
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Freej Swaeleh Menu - قائمة فريج سويله</h1>
+        <h1>Freej Swaileh Menu - قائمة فريج صويلح</h1>
     </header>
     <div class="menu-container">
         <div class="menu-section">
             <h2>Cocktails - كوكتيلات</h2>
             <div class="menu-item">
-                <span>Freej Swaeleh Ice Cream <div class="arabic-name">آيس كريم فريج سويله</div></span>
+                <span>Freej Swaileh Ice Cream <div class="arabic-name">آيس كريم فريج صويلح</div></span>
                 <span class="price">16.00 SAR</span>
             </div>
             <div class="menu-item">
@@ -216,11 +257,11 @@
                 <span class="price">28.50 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Zubaidi Swaeleh <div class="arabic-name">زبيدي سويله</div></span>
+                <span>Zubaidi Swaileh <div class="arabic-name">زبيدي صويلح</div></span>
                 <span class="price">79.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Hamour Swaeleh <div class="arabic-name">هامور سويله</div></span>
+                <span>Hamour Swaileh <div class="arabic-name">هامور صويلح</div></span>
                 <span class="price">79.00 SAR</span>
             </div>
             <div class="menu-item">
@@ -232,7 +273,7 @@
                 <span class="price">36.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Kebsa Swaeleh <div class="arabic-name">كبسة سويله</div></span>
+                <span>Kebsa Swaileh <div class="arabic-name">كبسة صويلح</div></span>
                 <span class="price">89.00 SAR</span>
             </div>
             <div class="menu-item">
@@ -248,12 +289,12 @@
                 <span class="price">79.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Murabian Zubaidi Swaeleh <div class="arabic-name">مرابيان زبيدي سويله</div></span>
+                <span>Murabian Zubaidi Swaileh <div class="arabic-name">مرابيان زبيدي صويلح</div></span>
                 <span class="price">96.00 SAR</span>
             </div>
             <div class="menu-item">
                 <span>Prawns Biriyani <div class="arabic-name">برياني روبيان</div></span>
- VHS                <span class="price">59.00 SAR</span>
+                <span class="price">59.00 SAR</span>
             </div>
             <div class="menu-item">
                 <span>Fish Ga'ad <div class="arabic-name">سمك قعاد</div></span>
@@ -272,7 +313,7 @@
                 <span class="price">36.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Bamiya Swaeleh <div class="arabic-name">بامية سويله</div></span>
+                <span>Bamiya Swaileh <div class="arabic-name">بامية صويلح</div></span>
                 <span class="price">89.00 SAR</span>
             </div>
             <div class="menu-item">
@@ -280,7 +321,7 @@
                 <span class="price">42.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>White Rice with Chicken Curry <div class="arabic-name">أرز أأرز أبيض مع كاري دجاج</div></span>
+                <span>White Rice with Chicken Curry <div class="arabic-name">أرز أبيض مع كاري دجاج</div></span>
                 <span class="price">29.50 SAR</span>
             </div>
             <div class="menu-item">
@@ -327,7 +368,7 @@
         <div class="menu-section">
             <h2>Dessert - حلويات</h2>
             <div class="menu-item">
-                <span>Freej Swaeleh Cake <div class="arabic-name">كيكة فريج سويله</div></span>
+                <span>Freej Swaileh Cake <div class="arabic-name">كيكة فريج صويلح</div></span>
                 <span class="price">15.00 SAR</span>
             </div>
             <div class="menu-item">
@@ -460,7 +501,7 @@
                 <span class="price">36.00 SAR</span>
             </div>
             <div class="menu-item">
-                <span>Kebab Bu Swaileh <div class="arabic-name">كباب بو سويله</div></span>
+                <span>Kebab Bu Swaileh <div class="arabic-name">كباب بو صويلح</div></span>
                 <span class="price">39.00 SAR</span>
             </div>
             <div class="menu-item">
