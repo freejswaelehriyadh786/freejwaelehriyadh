@@ -51,15 +51,15 @@ const categoryMap = {
 };
 
 const subcategoryMap = {
-    'Kuwaiti Food': 'طعام كويتي',
+    'Kuwaiti Food': 'ماكؤلات كويتية',
     'Appetizers': 'المقبلات',
     'Grilled': 'مشويات',
-    'Soups': 'الحساء',
+    'Soups': 'الشوربات',
     'Dessert': 'الحلوى',
     'Beverages': 'المشروبات',
     'Cocktails': 'الكوكتيلات',
     'Juices': 'العصائر',
-    'Soups & Starters': 'الحساء والمقبلات',
+    'Soups & Starters': 'الشوربات والمقبلات',
     'Salads': 'السلطات',
     'Egg Dishes': 'أطباق البيض',
     'Meat Dishes': 'أطباق اللحوم',
@@ -305,4 +305,5 @@ document.getElementById('menu-form').addEventListener('submit', async (e) => {
 document.addEventListener('DOMContentLoaded', async () => {
     db = await initDB();
     updateContent();
+
 });
