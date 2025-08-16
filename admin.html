@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Freej Swaeleh</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="https://raw.githubusercontent.com/freejswaeleh/omar/main/images/logo.jpeg" alt="Freej Swaeleh Logo">
+        </div>
+        <h1 id="admin-title">Admin - Freej Swaeleh</h1>
+        <div class="lang-switch">
+            <button id="lang-toggle" onclick="switchLanguage()">AR</button>
+            <button id="logout-btn" style="display:none;" onclick="logout()">Logout</button>
+        </div>
+    </header>
+    <main>
+        <section id="login-section" style="display: block;">
+            <h2>Admin Login</h2>
+            <form id="login-form">
+                <label for="username">Username:</label>
+                <input type="text" id="username" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+        <section id="admin-section" style="display: none;">
+            <h2>Manage Menu Items</h2>
+            <form id="menu-form">
+                <input type="hidden" id="item-id">
+                <label for="name-en">Name (English):</label>
+                <input type="text" id="name-en" required>
+                <label for="name-ar">Name (Arabic):</label>
+                <input type="text" id="name-ar" required>
+                <label for="price">Price (SAR):</label>
+                <input type="number" id="price" step="0.01" required>
+                <label for="image-url">Image URL:</label>
+                <input type="url" id="image-url" required>
+                <label for="category">Category:</label>
+                <select id="category" required>
+                    <option value="Lunch Menu">Lunch Menu</option>
+                    <option value="Breakfast Menu">Breakfast Menu</option>
+                </select>
+                <label for="subcategory">Subcategory:</label>
+                <select id="subcategory" required>
+                    <option value="Kuwaiti Food">Kuwaiti Food</option>
+                    <option value="Appetizers">Appetizers</option>
+                    <option value="Grilled">Grilled</option>
+                    <option value="Soups">Soups</option>
+                    <option value="Dessert">Dessert</option>
+                    <option value="Beverages">Beverages</option>
+                    <option value="Cocktails">Cocktails</option>
+                    <option value="Juices">Juices</option>
+                    <option value="Soups & Starters">Soups & Starters</option>
+                    <option value="Salads">Salads</option>
+                    <option value="Egg Dishes">Egg Dishes</option>
+                    <option value="Meat Dishes">Meat Dishes</option>
+                    <option value="Vegetable Dishes">Vegetable Dishes</option>
+                    <option value="Cheese Dishes">Cheese Dishes</option>
+                </select>
+                <button type="submit">Save Item</button>
+            </form>
+            <h3>Menu Items</h3>
+            <div id="menu-items" class="menu-grid"></div>
+        </section>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>
