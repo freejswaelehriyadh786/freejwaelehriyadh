@@ -3,34 +3,495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Freej Swaeleh Restaurant</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Cairo:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.min.js"></script>
+    <title>Freej Swaeleh Menu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #8B4513;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        .menu-container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        .menu-section {
+            margin-bottom: 2rem;
+        }
+        .menu-section h2 {
+            color: #8B4513;
+            border-bottom: 2px solid #8B4513;
+            padding-bottom: 0.5rem;
+        }
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px dashed #ccc;
+        }
+        .menu-item span {
+            font-weight: bold;
+        }
+        .price {
+            color: #2e7d32;
+        }
+        .arabic-name {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+            .menu-container {
+                padding: 0 0.5rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="https://raw.githubusercontent.com/freejswaeleh/omar/main/images/logo.jpeg" alt="Freej Swaeleh Logo">
-        </div>
-        <h1 id="restaurant-name">Freej Swaeleh Restaurant</h1>
-        <div class="lang-switch">
-            <button id="lang-toggle" onclick="switchLanguage()">AR</button>
-        </div>
+        <h1>Freej Swaeleh Menu - قائمة فريج سويله</h1>
     </header>
-    <main>
-        <section id="welcome-message">
-            <h2>Welcome to Freej Swaeleh</h2>
-            <p>Experience the heart of Kuwaiti hospitality at Freej Swaeleh Restaurant, now proudly open in Riyadh, Saudi Arabia. Bringing the authentic flavors of Kuwait to the vibrant capital, we invite you to savor cherished family recipes that capture the essence of Kuwaiti cuisine. From the fragrant spices of machboos to the comforting warmth of fattoush and the sweet delight of balaleet, every dish celebrates Kuwait’s rich culinary heritage. Join us for a warm, welcoming dining experience that feels like a gathering with loved ones, right here in the heart of Riyadh.</p>
-        </section>
-        <section id="menu">
-            <h2 id="menu-title">Our Menu</h2>
-            <div id="menu-items" class="menu-grid"></div>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Freej Swaeleh Restaurant. All rights reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    <div class="menu-container">
+        <div class="menu-section">
+            <h2>Cocktails - كوكتيلات</h2>
+            <div class="menu-item">
+                <span>Freej Swaeleh Ice Cream <div class="arabic-name">آيس كريم فريج سويله</div></span>
+                <span class="price">16.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Samadi <div class="arabic-name">صمادي</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Embratoor <div class="arabic-name">إمبراطور</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Fakhfakhina <div class="arabic-name">فخفخينا</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Abu Abdurahman <div class="arabic-name">أبو عبد الرحمن</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Milk Shake <div class="arabic-name">ميلك شيك</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mango Shake <div class="arabic-name">مانجو شيك</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Cocktail <div class="arabic-name">كوكتيل</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Beverages - مشروبات</h2>
+            <div class="menu-item">
+                <span>Water (small) <div class="arabic-name">ماء (صغير)</div></span>
+                <span class="price">5.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Water (big) <div class="arabic-name">ماء (كبير)</div></span>
+                <span class="price">7.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Pepsi / Diet <div class="arabic-name">بيبسي / دايت</div></span>
+                <span class="price">5.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>7Up / Diet <div class="arabic-name">سيفن أب / دايت</div></span>
+                <span class="price">5.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Milk <div class="arabic-name">حليب</div></span>
+                <span class="price">7.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Camel Milk <div class="arabic-name">حليب الإبل</div></span>
+                <span class="price">7.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Hot Drinks - مشروبات ساخنة</h2>
+            <div class="menu-item">
+                <span>Kadak <div class="arabic-name">كدك</div></span>
+                <span class="price">7.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Tea (small) <div class="arabic-name">شاي (صغير)</div></span>
+                <span class="price">7.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Tea (big) <div class="arabic-name">شاي (كبير)</div></span>
+                <span class="price">13.50 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Juice - عصائر</h2>
+            <div class="menu-item">
+                <span>Orange <div class="arabic-name">برتقال</div></span>
+                <span class="price">13.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Carrot <div class="arabic-name">جزر</div></span>
+                <span class="price">13.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Apple <div class="arabic-name">تفاح</div></span>
+                <span class="price">12.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Lemon <div class="arabic-name">ليمون</div></span>
+                <span class="price">12.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Lemon with Mint <div class="arabic-name">ليمون بالنعناع</div></span>
+                <span class="price">14.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Banana with Milk <div class="arabic-name">موز بالحليب</div></span>
+                <span class="price">13.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Pineapple <div class="arabic-name">أناناس</div></span>
+                <span class="price">13.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Pomegranate <div class="arabic-name">رمان</div></span>
+                <span class="price">12.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kiwi <div class="arabic-name">كيوي</div></span>
+                <span class="price">12.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Sweet Melon <div class="arabic-name">شمام</div></span>
+                <span class="price">12.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mango with Mint <div class="arabic-name">مانجو بالنعناع</div></span>
+                <span class="price">12.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Baidan <div class="arabic-name">بيضان</div></span>
+                <span class="price">13.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Soups - شوربات</h2>
+            <div class="menu-item">
+                <span>Shrimp Soup <div class="arabic-name">شوربة روبيان</div></span>
+                <span class="price">16.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Lentil Soup <div class="arabic-name">شوربة عدس</div></span>
+                <span class="price">13.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Chicken Corn Soup <div class="arabic-name">شوربة دجاج بالذرة</div></span>
+                <span class="price">13.50 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Kuwaiti Food - أكلات كويتية</h2>
+            <div class="menu-item">
+                <span>Chicken Majbous <div class="arabic-name">مجبوس دجاج</div></span>
+                <span class="price">28.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Zubaidi Swaeleh <div class="arabic-name">زبيدي سويله</div></span>
+                <span class="price">79.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Hamour Swaeleh <div class="arabic-name">هامور سويله</div></span>
+                <span class="price">79.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Fresh Prawns Mawash <div class="arabic-name">روبيان مواش طازج</div></span>
+                <span class="price">59.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Dry Prawns Mawash <div class="arabic-name">روبيان مواش مجفف</div></span>
+                <span class="price">36.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kebsa Swaeleh <div class="arabic-name">كبسة سويله</div></span>
+                <span class="price">89.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Magluba <div class="arabic-name">مقلوبة</div></span>
+                <span class="price">88.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>White Rice with marak (ballol, zubaidi, hamour) <div class="arabic-name">أرز أبيض مع مرق</div></span>
+                <span class="price">79.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Murabian (Prawns) <div class="arabic-name">مرابيان روبيان</div></span>
+                <span class="price">79.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Murabian Zubaidi Swaeleh <div class="arabic-name">مرابيان زبيدي سويله</div></span>
+                <span class="price">96.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Prawns Biriyani <div class="arabic-name">برياني روبيان</div></span>
+ VHS                <span class="price">59.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Fish Ga'ad <div class="arabic-name">سمك قعاد</div></span>
+                <span class="price">79.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Grilled Seabas <div class="arabic-name">سيباس مشوي</div></span>
+                <span class="price">99.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mutton Biriyani <div class="arabic-name">برياني لحم</div></span>
+                <span class="price">54.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Chicken Biriyani <div class="arabic-name">برياني دجاج</div></span>
+                <span class="price">36.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Bamiya Swaeleh <div class="arabic-name">بامية سويله</div></span>
+                <span class="price">89.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>White Rice with Mutton Curry <div class="arabic-name">أرز أبيض مع كاري لحم</div></span>
+                <span class="price">42.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>White Rice with Chicken Curry <div class="arabic-name">أرز أأرز أبيض مع كاري دجاج</div></span>
+                <span class="price">29.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Rice Kubbah <div class="arabic-name">كبة أرز</div></span>
+                <span class="price">19.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kubbah Burgal / Laban Kubbah <div class="arabic-name">كبة برغل / كبة لبن</div></span>
+                <span class="price">19.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Harees, Jarees <div class="arabic-name">هريس، جريش</div></span>
+                <span class="price">16.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Markookh <div class="arabic-name">مرقوق</div></span>
+                <span class="price">24.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kabooth <div class="arabic-name">كبوث</div></span>
+                <span class="price">24.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Tashreeb <div class="arabic-name">تشريب</div></span>
+                <span class="price">19.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Fried Shrimps <div class="arabic-name">روبيان مقلي</div></span>
+                <span class="price">45.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Aseeda <div class="arabic-name">عصيدة</div></span>
+                <span class="price">18.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kubba Mix <div class="arabic-name">كبة مشكلة</div></span>
+                <span class="price">19.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Prawns Masala <div class="arabic-name">روبيان ماسالا</div></span>
+                <span class="price">45.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Dessert - حلويات</h2>
+            <div class="menu-item">
+                <span>Freej Swaeleh Cake <div class="arabic-name">كيكة فريج سويله</div></span>
+                <span class="price">15.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mango Cake <div class="arabic-name">كيكة مانجو</div></span>
+                <span class="price">15.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Biscuits Cake <div class="arabic-name">كيكة بسكويت</div></span>
+                <span class="price">15.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Luqaimat <div class="arabic-name">لقيمات</div></span>
+                <span class="price">21.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Balaleet <div class="arabic-name">بلاليط</div></span>
+                <span class="price">18.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Season Fruits <div class="arabic-name">فواكه موسمية</div></span>
+                <span class="price">15.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Sweet Corner - ركن الحلويات</h2>
+            <div class="menu-item">
+                <span>Halwa Omani (small) <div class="arabic-name">حلوى عمانية (صغير)</div></span>
+                <span class="price">29.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Rahash (small) <div class="arabic-name">رحاش (صغير)</div></span>
+                <span class="price">40.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Barazik <div class="arabic-name">برازق</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Darabeel <div class="arabic-name">درابيل</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Quraibia <div class="arabic-name">قريبة</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Cup Cake <div class="arabic-name">كب كيك</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mix Sweet <div class="arabic-name">حلويات مشكلة</div></span>
+                <span class="price">57.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Cake Zafran <div class="arabic-name">كيكة زعفران</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Salads and Appetizers - سلطات ومقبلات</h2>
+            <div class="menu-item">
+                <span>Hummous <div class="arabic-name">حمص</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mutabbal <div class="arabic-name">متبل</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Yoghurt w/ Cucumber <div class="arabic-name">لبن بالخيار</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Green Salad <div class="arabic-name">سلطة خضراء</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Fattoush <div class="arabic-name">فتوش</div></span>
+                <span class="price">16.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Tabbouleh <div class="arabic-name">تبولة</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Grape Leaves <div class="arabic-name">ورق عنب</div></span>
+                <span class="price">16.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Baba Ganoush <div class="arabic-name">بابا غنوج</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mayonnaise Salad <div class="arabic-name">سلطة مايونيز</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Roca Salad <div class="arabic-name">سلطة روكا</div></span>
+                <span class="price">10.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Tuna Salad <div class="arabic-name">سلطة تونة</div></span>
+                <span class="price">17.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Corn Salad <div class="arabic-name">سلطة ذرة</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Beetroot Salad <div class="arabic-name">سلطة بنجر</div></span>
+                <span class="price">14.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Shrimp Salad <div class="arabic-name">سلطة روبيان</div></span>
+                <span class="price">22.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mixed Salad (Large) <div class="arabic-name">سلطة مشكلة (كبير)</div></span>
+                <span class="price">69.00 SAR</span>
+            </div>
+        </div>
+        <div class="menu-section">
+            <h2>Grilled - مشاوي</h2>
+            <div class="menu-item">
+                <span>Kebab <div class="arabic-name">كباب</div></span>
+                <span class="price">29.50 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kebab Khashkhash <div class="arabic-name">كباب خشخاش</div></span>
+                <span class="price">36.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Kebab Bu Swaileh <div class="arabic-name">كباب بو سويله</div></span>
+                <span class="price">39.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Chicken Tikka <div class="arabic-name">تكة دجاج</div></span>
+                <span class="price">33.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mutton Tikka <div class="arabic-name">تكة لحم</div></span>
+                <span class="price">36.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Lamb Chops <div class="arabic-name">قطع لحم الضأن</div></span>
+                <span class="price">49.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Arayes Mutton <div class="arabic-name">عرايس لحم</div></span>
+                <span class="price">22.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Grilled Chicken (Half) <div class="arabic-name">دجاج مشوي (نص)</div></span>
+                <span class="price">32.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mix Grill (One Person) <div class="arabic-name">مشاوي مشكلة (شخص واحد)</div></span>
+                <span class="price">89.00 SAR</span>
+            </div>
+            <div class="menu-item">
+                <span>Mix Grill (Medium) <div class="arabic-name">مشاوي مشكلة (متوسط)</div></span>
+                <span class="price">119.00 SAR</span>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
